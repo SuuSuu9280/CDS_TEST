@@ -1,7 +1,7 @@
-@AbapCatalog.sqlViewName: 'ZCDS928001'
-@EndUserText.label:       'UNION'
+@AbapCatalog.sqlViewName: 'ZCDS928002'
+@EndUserText.label:       'UNION ALL'
 @ClientHandling.type: #CLIENT_DEPENDENT
-define view zcds_test_9280_01
+define view ZCDS_TEST_9280_02
   as select from zcds_tab_9280_01 as a
 {
   a.seq1 as Key1,
@@ -9,7 +9,7 @@ define view zcds_test_9280_01
   a.data1 as Data1,
   a.data2 as Data2
 }
-union
+union all
 select from zcds_tab_9280_02 as b
 {
   b.seq1 as Key1,
